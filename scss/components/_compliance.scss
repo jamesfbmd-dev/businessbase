@@ -1,65 +1,65 @@
 .compliance-section {
     background-color: $bg-light;
-}
 
-.compliance-container {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-
-.compliance-content { flex: 1; }
-.compliance-visual { flex: 1; position: relative; }
-
-.visual-img {
-    border-radius: $radius-lg;
-    box-shadow: $shadow-lg;
-}
-
-.compliance-feature {
-    display: flex;
-    gap: 20px;
-    background: $white;
-    padding: 24px;
-    border-radius: $radius-md;
-    box-shadow: $shadow-sm;
-    margin-top: 24px;
-}
-
-.feature-icon { color: $brand-red; flex-shrink: 0; }
-.feature-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
-.feature-text { font-size: 0.9rem; color: $slate-text; }
-
-.stat-badge {
-    background: $white;
-    padding: 24px;
-    border-radius: $radius-md;
-    box-shadow: $shadow-lg;
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-left: 5px solid $brand-red;
-}
-
-.badge-circle {
-    background: #eff6ff;
-    color: #2563eb;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.badge-title { font-weight: 800; font-size: 1.25rem; }
-.badge-subtitle { font-size: 0.8rem; color: $slate-text; }
-
-@media (max-width: 1100px) {
     .compliance-container {
-        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .compliance-content { flex: 1; }
+    .compliance-visual { flex: 1; position: relative; }
+
+    .visual-img {
+        border-radius: $radius-lg;
+        box-shadow: $shadow-lg;
+    }
+
+    .compliance-feature {
+        display: flex;
+        gap: 20px;
+        background: $white;
+        padding: 24px;
+        border-radius: $radius-md;
+        box-shadow: $shadow-sm;
+        margin-top: 24px;
+    }
+
+    .feature-icon { color: $brand-red; flex-shrink: 0; }
+    .feature-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
+    .feature-text { font-size: 0.9rem; color: $slate-text; }
+
+    .stat-badge {
+        background: $white;
+        padding: 24px;
+        border-radius: $radius-md;
+        box-shadow: $shadow-lg;
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-left: 5px solid $brand-red;
+    }
+
+    .badge-circle {
+        background: #eff6ff;
+        color: #2563eb;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .badge-title { font-weight: 800; font-size: 1.25rem; }
+    .badge-subtitle { font-size: 0.8rem; color: $slate-text; }
+
+    @media (max-width: 1100px) {
+        .compliance-container {
+            flex-direction: column;
+        }
     }
 }
