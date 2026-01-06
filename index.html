@@ -16,14 +16,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
-    <style>      /* The Container Div */
+<!--     <style>
+        /* The Container Div */
         #globe-container {
             width: 600px;
             height: 400px;
             /*background-color: #000;*/
             position: relative;
             overflow: hidden;
-            
             min-width: 200px;
             min-height: 200px;
         }
@@ -31,7 +31,8 @@
         canvas {
             display: block;
             outline: none;
-        }</style>
+        }
+    </style> -->
 </head>
 <body>
 
@@ -67,35 +68,32 @@
         </div>
 
         <div class="container hero-grid">
-
             <!-- <div id="globe-container"></div> -->
 
-             <div class="hero-content">
-            <div class="hero-tag">
-                <i data-lucide="map-pin" size="14"></i> Marlborough's Payroll Experts
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <i data-lucide="map-pin" size="14"></i> Marlborough's Payroll Experts
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="hero-title-white">Focus on your business.</span> <br><span class="hero-title-red">We'll handle <br>your payroll.</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Seamless payroll solutions with expert bookkeeping support. Accurate, compliant, and effortless - giving you confidence every pay run. Backed by local Marlborough expertise and seamless Xero integration.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        Book Free Payroll Consultation <i data-lucide="chevron-right"></i>
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        See Payroll & Bookkeeping Services
+                    </a>
+                </div>
             </div>
-
-            <h1 class="hero-title">
-                <span class="hero-title-white">Focus on your business.</span> <br><span class="hero-title-red">We'll handle <br>your payroll.</span>
-            </h1>
-
-            <p class="hero-subtitle">
-                Seamless payroll solutions with expert bookkeeping support. Accurate, compliant, and effortless - giving you confidence every pay run. Backed by local Marlborough expertise and seamless Xero integration.
-            </p>
-
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">
-                    Book Free Payroll Consultation <i data-lucide="chevron-right"></i>
-                </a>
-                <a href="#services" class="btn btn-secondary">
-                    See Payroll & Bookkeeping Services
-                </a>
-            </div>
-        </div>
-
 
             <div class="hero-visual">
-
                 <div class="floating-card card-compliance">
                     <div class="card-icon icon-red"><i data-lucide="heart-handshake"></i></div>
                     <div class="card-text">
@@ -173,7 +171,7 @@
     </section>
 
         <!-- Trusted By -->
-    <section class="trusted-by">
+    <section class="trusted-by" id="trusted-by">
         <div class="container">
             <div class="trusted-label">Empowering Industry Leaders Across Marlborough</div>
             <div class="logos-grid">
@@ -189,11 +187,11 @@
     <!-- Compliance Detail Section -->
     <section id="compliance" class="section-padding compliance-section">
         <div class="container compliance-container">
-            <div class="compliance-content">
+            <div class="section-header compliance-content">
                 <span class="sub-heading">Regulatory Confidence</span>
                 <h2 class="main-heading">Bulletproof Payroll</h2>
                 <p>Compliance isn't just about avoiding fines, it's about building trust with your employees. We specialize in the nuances of New Zealand's Holidays Act, ensuring calculations like 'Average Weekly Earnings' are always&nbsp;precise.</p>
-                
+
                 <div class="compliance-feature">
                     <div class="feature-icon"><i data-lucide="check-circle-2" size="28"></i></div>
                     <div>
@@ -210,7 +208,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="compliance-visual">
                 <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Compliance Review" class="visual-img">
                 <div class="stat-badge">
@@ -233,7 +231,7 @@
                 <span class="sub-heading">The BusinessBase Advantage</span>
                 <h2 class="main-heading">Your local finance department</h2>
             </div>
-            
+
             <div class="reasons-grid">
                 <div class="reason-card">
                     <div class="reason-icon-wrapper">
@@ -242,7 +240,7 @@
                     <h4 class="reason-title">Marlborough Born</h4>
                     <p class="reason-text">We don't live in a call center. We're right here in Blenheim, ready to meet in person and walk through your books.</p>
                 </div>
-                
+
                 <div class="reason-card">
                     <div class="reason-icon-wrapper">
                         <i data-lucide="medal"></i>
@@ -270,7 +268,7 @@
                     <span class="sub-heading">Get Started</span>
                     <h4 class="contact-title">Let’s get your <br>books in order.</h4>
                     <p class="footer-text">Ready for a more efficient business? Fill out the form and a specialist will be in touch within 24 hours.</p>
-                    
+
                     <div class="contact-info-list">
                         <div class="info-item">
                             <div class="info-icon"><i data-lucide="phone" size="20"></i></div>
@@ -298,7 +296,7 @@
                             <input type="text" class="form-input" placeholder="Company Name">
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="form-label">Email</label>
                         <input type="email" class="form-input" placeholder="jane@example.com">

@@ -1,114 +1,115 @@
-.section-header {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 80px;
-}
+#services {
+    @include section-styles;
+    // .section-header {
+    //     text-align: center;
+    //     max-width: 700px;
+    //     margin: 0 auto 80px;
 
-.sub-heading {
-    color: $brand-red;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-    display: block;
-}
+    //     .sub-heading {
+    //         color: $brand-red;
+    //         font-weight: 700;
+    //         text-transform: uppercase;
+    //         font-size: 0.875rem;
+    //         letter-spacing: 2px;
+    //         margin-bottom: 12px;
+    //         display: block;
+    //     }
+    //     .main-heading {
+    //         font-size: 3rem;
+    //         margin-bottom: 20px;
+    //         letter-spacing: -1px;
+    //         font-weight: 800;
+    //     }
+    // }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 32px;
 
-.main-heading {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-    font-weight: 800;
-}
+        .service-card {
+            background: $white;
+            padding: 48px;
+            border-radius: $radius-lg;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: $transition;
+            display: flex;
+            flex-direction: column;
+            position: relative;
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
-}
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: $shadow-lg;
+                border-color: rgba(189, 6, 26, 0.1);
+            }
 
-.service-card {
-    background: $white;
-    padding: 48px;
-    border-radius: $radius-lg;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: $transition;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+            .service-icon {
+                width: 64px;
+                height: 64px;
+                background: $bg-light;
+                border-radius: $radius-md;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 32px;
+                color: $navy-dark;
+            }
 
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: $shadow-lg;
-        border-color: rgba(189, 6, 26, 0.1);
-    }
+            .service-title {
+                font-size: 1.5rem;
+                font-weight: 800;
+                margin-bottom: 20px;
+                letter-spacing: -0.5px;
+            }
 
-    &.featured {
-        transform: scale(1.05);
-        z-index: 10;
-        border: 1px solid rgba(189, 6, 26, 0.15);
-        box-shadow: $shadow-lg;
+            .service-description {
+                font-size: 0.95rem;
+                color: $slate-text;
+                margin-bottom: 24px;
+            }
 
-        &:hover {
-            transform: scale(1.05) translateY(-10px);
+            .service-list {
+                margin-bottom: 32px;
+                flex-grow: 1;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    margin-bottom: 14px;
+                    color: $slate-text;
+                    font-size: 1rem;
+                }
+
+                .check-icon {
+                    color: #22c55e;
+                    width: 18px;
+                    height: 18px;
+                    flex-shrink: 0;
+                }
+            }
+
+            &.featured {
+                transform: scale(1.05);
+                z-index: 10;
+                border: 1px solid rgba(189, 6, 26, 0.15);
+                box-shadow: $shadow-lg;
+
+                &:hover {
+                    transform: scale(1.05) translateY(-10px);
+                }
+
+                .service-icon {
+                    background: $brand-red;
+                    color: $white;
+                    box-shadow: $shadow-brand;
+                }
+
+                .check-icon {
+                    color: $brand-red;
+                }
+            }
         }
-
-        .service-icon {
-            background: $brand-red;
-            color: $white;
-            box-shadow: $shadow-brand;
-        }
-
-        .check-icon {
-            color: $brand-red;
-        }
     }
-}
-
-.service-icon {
-    width: 64px;
-    height: 64px;
-    background: $bg-light;
-    border-radius: $radius-md;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 32px;
-    color: $navy-dark;
-}
-
-.service-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
-}
-
-.service-description {
-    font-size: 0.95rem;
-    color: $slate-text;
-    margin-bottom: 24px;
-}
-
-.service-list {
-    margin-bottom: 32px;
-    flex-grow: 1;
-
-    li {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 14px;
-        color: $slate-text;
-        font-size: 1rem;
-    }
-}
-
-.check-icon {
-    color: #22c55e;
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
