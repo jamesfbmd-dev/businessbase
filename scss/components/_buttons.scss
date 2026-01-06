@@ -1,0 +1,46 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: $radius-full;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition;
+    border: none;
+    font-size: 1rem;
+
+    &-primary {
+        background-color: $brand-red;
+        color: $white;
+        box-shadow: $shadow-brand;
+
+        &:hover {
+            background-color: $brand-dark;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px -5px rgba(189, 6, 26, 0.35);
+        }
+    }
+
+    &-secondary {
+        background-color: rgba(15, 23, 42, 0.05);
+        color: $navy-dark;
+        backdrop-filter: blur(8px);
+
+        &:hover {
+            background-color: rgba(15, 23, 42, 0.1);
+            transform: translateY(-2px);
+        }
+    }
+
+    &-nav {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    &-full {
+        width: 100%;
+        border-radius: $radius-sm;
+    }
+}
