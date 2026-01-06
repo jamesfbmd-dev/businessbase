@@ -101,7 +101,6 @@ img {
   height: 90px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 }
 .navbar:not(.navbar-scrolled) .logo .logo-business {
