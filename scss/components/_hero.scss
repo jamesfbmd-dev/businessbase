@@ -7,21 +7,37 @@
     overflow: hidden;
     background-color: $navy-deep;
     color: $white;
-    background-image:
-        radial-gradient(circle at 15% 50%, rgba($navy-dark, 0.4), transparent 30%),
-        radial-gradient(circle at 85% 30%, rgba($navy-dark, 0.3), transparent 40%),
-        radial-gradient(circle at 60% 80%, rgba($slate-text, 0.2), transparent 40%);
-    background-size: 200% 200%;
-    animation: moveGradient 25s ease-in-out infinite alternate;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        filter: blur(120px);
+        opacity: 0.35;
+        border-radius: 50%;
+        animation: move 25s infinite alternate ease-in-out;
+        z-index: 0;
+    }
+
+    &::before {
+        background: radial-gradient(circle, rgba($brand-red, 0.6) 0%, transparent 70%);
+        top: -15%;
+        left: -10%;
+        animation-duration: 22s;
+    }
+
+    &::after {
+        background: radial-gradient(circle, rgba($brand-light, 0.4) 0%, transparent 70%);
+        bottom: -20%;
+        right: -15%;
+        animation-duration: 28s;
+    }
 
     &:hover .hero-image {
         transform: scale(1);
     }
-}
-
-@keyframes moveGradient {
-    from { background-position: 0% 50%; }
-    to { background-position: 100% 50%; }
 }
 
 .hero-grid {
@@ -180,4 +196,19 @@
     .card-revenue {
         right: 0;
     }
+}
+
+@keyframes move {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(40px, -60px) scale(1.1);
+  }
+  50% {
+    transform: translate(-50px, 30px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, 50px) scale(1.05);
+  }
 }
