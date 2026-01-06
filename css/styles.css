@@ -93,8 +93,7 @@ img {
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -102,7 +101,25 @@ img {
   height: 90px;
   display: flex;
   align-items: center;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
+.navbar:not(.navbar-scrolled) .logo .logo-business {
+  color: #ffffff;
+}
+.navbar.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.navbar.navbar-scrolled .nav-link {
+  color: #0f172a;
+}
+.navbar.navbar-scrolled .nav-link:hover {
+  color: #BD061A;
+}
+.navbar.navbar-scrolled .logo-business {
+  color: #0f172a;
 }
 
 .nav-container {
@@ -119,6 +136,9 @@ img {
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+}
+.logo-business {
+  transition: color 0.3s ease-in-out;
 }
 .logo-icon {
   background: linear-gradient(135deg, #BD061A, #f43f5e);
@@ -137,11 +157,12 @@ img {
 
 .nav-link {
   font-weight: 600;
-  color: #0f172a;
+  color: #ffffff;
   font-size: 0.95rem;
+  transition: color 0.3s ease-in-out;
 }
 .nav-link:hover {
-  color: #BD061A;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 768px) {
