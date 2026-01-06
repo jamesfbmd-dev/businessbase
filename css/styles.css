@@ -104,6 +104,9 @@ img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 }
+.navbar:not(.navbar-scrolled) .logo .logo-business {
+  color: #ffffff;
+}
 .navbar.navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -115,6 +118,9 @@ img {
 }
 .navbar.navbar-scrolled .nav-link:hover {
   color: #BD061A;
+}
+.navbar.navbar-scrolled .logo-business {
+  color: #0f172a;
 }
 
 .nav-container {
@@ -131,6 +137,9 @@ img {
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+}
+.logo-business {
+  transition: color 0.3s ease-in-out;
 }
 .logo-icon {
   background: linear-gradient(135deg, #BD061A, #f43f5e);

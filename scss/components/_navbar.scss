@@ -10,6 +10,12 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 
+    &:not(.navbar-scrolled) {
+        .logo .logo-business {
+            color: $white;
+        }
+    }
+
     &.navbar-scrolled {
         background-color: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(12px);
@@ -22,6 +28,10 @@
 
         .nav-link:hover {
             color: $brand-red;
+        }
+
+        .logo-business {
+            color: $navy-dark;
         }
     }
 }
@@ -40,6 +50,10 @@
     font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: -0.5px;
+
+    &-business {
+        transition: color 0.3s ease-in-out;
+    }
 
     &-icon {
         background: linear-gradient(135deg, $brand-red, $brand-light);
