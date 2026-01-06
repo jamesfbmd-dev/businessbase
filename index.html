@@ -39,8 +39,15 @@
 
     <!-- Modern Hero Section -->
     <section class="hero">
-        <div class="hero-blob blob-1"></div>
-        <div class="hero-blob blob-2"></div>
+
+        <div class="gradient-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+            <div class="blob blob-5"></div>
+            <div class="blob blob-6"></div>
+        </div>
 
         <div class="container hero-grid">
             <div class="hero-content">
@@ -49,7 +56,7 @@
                 </div>
 
                 <h1 class="hero-title">
-                    Run your business. <br><span>We'll handle <br>the numbers.</span>
+                    <span class="hero-title-white">Run your business.</span> <br><span class="hero-title-red">We'll handle <br>the numbers.</span>
                 </h1>
 
                 <p class="hero-subtitle">
@@ -89,20 +96,6 @@
                         <p>xyz Accredited</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trusted By -->
-    <section class="trusted-by">
-        <div class="container">
-            <div class="trusted-label">Empowering Industry Leaders Across Marlborough</div>
-            <div class="logos-grid">
-                <div class="client-logo"><i data-lucide="grape"></i> &nbsp;Viticulture</div>
-                <div class="client-logo"><i data-lucide="anchor"></i> &nbsp;Marine</div>
-                <div class="client-logo"><i data-lucide="hammer"></i> &nbsp;Construction</div>
-                <div class="client-logo"><i data-lucide="utensils"></i> &nbsp;Hospitality</div>
-                <div class="client-logo"><i data-lucide="truck"></i> &nbsp;Logistics</div>
             </div>
         </div>
     </section>
@@ -156,6 +149,20 @@
                         <li><i data-lucide="check" class="check-icon"></i> Staff Training Sessions</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Trusted By -->
+    <section class="trusted-by">
+        <div class="container">
+            <div class="trusted-label">Empowering Industry Leaders Across Marlborough</div>
+            <div class="logos-grid">
+                <div class="client-logo"><i data-lucide="grape"></i> &nbsp;Fromm</div>
+                <div class="client-logo"><i data-lucide="anchor"></i> &nbsp;Port Marlborough</div>
+                <div class="client-logo"><i data-lucide="hammer"></i> &nbsp;MFC</div>
+                <div class="client-logo"><i data-lucide="utensils"></i> &nbsp;Raupo</div>
+                <div class="client-logo"><i data-lucide="truck"></i> &nbsp;FedEx</div>
             </div>
         </div>
     </section>
@@ -326,6 +333,43 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        const hero = document.querySelector('.hero-visual');
+        const maxTilt = 10; // maximum degrees of rotation
+        const ease = 0.05;  // smaller = heavier, slower easing
+
+        // Track target mouse position normalized to -1 → 1
+        let target = { x: 0, y: 0 };
+        let current = { x: 0, y: 0 };
+
+        window.addEventListener('mousemove', (e) => {
+          target.x = (e.clientX / window.innerWidth - 0.5) * 2; // -1 left, 1 right
+          target.y = (e.clientY / window.innerHeight - 0.5) * 2; // -1 top, 1 bottom
+        });
+
+        function animate() {
+          // Interpolate current position towards target
+          current.x += (target.x - current.x) * ease;
+          current.y += (target.y - current.y) * ease;
+
+          // Calculate rotations
+          const rotateY = current.x * maxTilt; // tilt left/right
+          const rotateX = -current.y * maxTilt; // tilt up/down
+
+          // Apply 3D transform
+          hero.style.transform = `
+            perspective(1000px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+          `;
+
+          requestAnimationFrame(animate);
+        }
+
+        // Start animation loop
+        animate();
+
+
     </script>
 </body>
 </html>

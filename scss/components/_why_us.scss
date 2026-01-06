@@ -1,0 +1,28 @@
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.reason-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.reason-icon-wrapper {
+    margin: 0 auto 24px;
+    width: 70px;
+    height: 70px;
+    background: $white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-md;
+    color: $brand-red;
+}
+
+.reason-title { font-weight: 800; font-size: 1.2rem; margin-bottom: 12px; }
+.reason-text { font-size: 0.95rem; color: $slate-text; }
