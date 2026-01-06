@@ -18,19 +18,19 @@
 
         &:hover {
             background-color: $brand-dark;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 20px -5px rgba(189, 6, 26, 0.35);
+            // transform: translateY(-3px);
+            // box-shadow: 0 15px 20px -5px rgba(189, 6, 26, 0.35);
         }
     }
 
     &-secondary {
-        background-color: rgba(15, 23, 42, 0.05);
+        background-color: $bg-light;
         color: $navy-dark;
         backdrop-filter: blur(8px);
 
         &:hover {
-            background-color: rgba(15, 23, 42, 0.1);
-            transform: translateY(-2px);
+            // background-color: $white;
+            // transform: translateY(-2px);
         }
     }
 

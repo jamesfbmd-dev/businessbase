@@ -5,39 +5,75 @@
     align-items: center;
     padding: 140px 0 80px;
     overflow: hidden;
+    background: $navy-deep;
 
     &:hover .hero-image {
         transform: scale(1);
     }
 }
 
-.hero-blob {
+.blob {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 900px;
+    height: 900px;
+    filter: blur(150px);
+    opacity: 0.25; /* slightly softer */
     border-radius: 50%;
-    z-index: 0;
-    filter: blur(80px);
-    opacity: 0.5;
+    animation: move 30s infinite alternate ease-in-out;
+    // animation: pulse 3s infinite ease-in-out;
+
+    &-1 {
+        background: radial-gradient(circle, #6B5B95 0%, transparent 70%);
+        top: -10%;
+        left: -15%;
+        animation-duration: 28s;
+    }
+
+    &-2 {
+        background: radial-gradient(circle, #feb236 0%, transparent 70%);
+        bottom: -10%;
+        right: -15%;
+        animation-duration: 32s;
+        animation-delay: -6s;
+    }
+
+    &-3 {
+        background: radial-gradient(circle, #d64161 0%, transparent 70%);
+        top: 20%;
+        right: 10%;
+        animation-duration: 36s;
+        animation-delay: -3s;
+    }
+
+    &-4 {
+        background: radial-gradient(circle, #ff7b25 0%, transparent 70%);
+        bottom: 20%;
+        left: 10%;
+        animation-duration: 34s;
+        animation-delay: -8s;
+    }
+
+    &-5 {
+        background: radial-gradient(circle, #92a8d1 0%, transparent 70%);
+        top: 45%;
+        left: 35%;
+        animation-duration: 40s;
+        animation-delay: -12s;
+    }
 }
 
-.blob-1 {
-    top: -100px;
-    right: -100px;
-    background: radial-gradient(circle, rgba(189, 6, 26, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
-    animation: pulse 10s infinite alternate;
-}
-
-.blob-2 {
-    bottom: -100px;
-    left: -100px;
-    background: radial-gradient(circle, rgba(51, 65, 85, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
-    animation: pulse 8s infinite alternate-reverse;
+@keyframes move {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    25% { transform: translate(10%, 15%) scale(1.05) rotate(4deg); }
+    50% { transform: translate(-15%, 10%) scale(0.95) rotate(-3deg); }
+    75% { transform: translate(12%, -12%) scale(1.02) rotate(2deg); }
+    100% { transform: translate(0, 0) scale(1) rotate(0deg); }
 }
 
 @keyframes pulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.3); }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
 }
 
 .hero-grid {
@@ -64,6 +100,8 @@
     margin-bottom: 24px;
 }
 
+
+
 .hero-title {
     font-size: 4.5rem;
     font-weight: 800;
@@ -71,7 +109,13 @@
     letter-spacing: -2px;
     margin-bottom: 24px;
 
-    span {
+    &-white {
+        background: linear-gradient(to bottom right, #fff 40%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-red {
         background: linear-gradient(to right, $brand-red, $brand-light);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
