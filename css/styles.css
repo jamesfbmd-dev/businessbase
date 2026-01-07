@@ -347,8 +347,24 @@ img {
   gap: 16px;
   flex-wrap: wrap;
 }
+.hero .hero-grid .hero-content .hero-cta .btn {
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+}
+@media (min-width: 1040px) {
+  .hero .hero-grid .hero-content .hero-cta .btn {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
 .hero .hero-grid .hero-visual {
+  display: none;
   position: relative;
+}
+@media (min-width: 768px) {
+  .hero .hero-grid .hero-visual {
+    display: inline-block;
+  }
 }
 .hero .hero-grid .hero-visual .floating-card {
   position: absolute;
