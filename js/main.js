@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
-    // Change background when user scrolls 50px
-    const scrollThreshold = 50;
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelectorAll('.nav-link');
 
+    // Navbar scroll effect
+    const scrollThreshold = 50;
     function updateNavbar() {
         if (window.scrollY > scrollThreshold) {
             navbar.classList.add('navbar-scrolled');
@@ -13,4 +15,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', updateNavbar, { passive: true });
     updateNavbar();
+
+    // Mobile navigation toggle
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+    }
+
+    // Close mobile nav when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (document.body.classList.contains('nav-open')) {
+                document.body.classList.remove('nav-open');
+            }
+        });
+    });
 });
