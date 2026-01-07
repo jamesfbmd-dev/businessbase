@@ -31,4 +31,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Testimonial "Read More" functionality
+    const readMoreButtons = document.querySelectorAll('.read-more');
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const content = e.target.closest('.testimonial-content');
+            if (content) {
+                const testimonialText = content.querySelector('.testimonial-text');
+                testimonialText.classList.toggle('expanded');
+                if (testimonialText.classList.contains('expanded')) {
+                    e.target.textContent = 'Read Less';
+                } else {
+                    e.target.textContent = 'Read More';
+                }
+            }
+        });
+    });
 });
