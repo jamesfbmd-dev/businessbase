@@ -154,7 +154,7 @@ img {
   align-items: center;
   gap: 40px;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .nav-links {
     display: none;
     position: fixed;
@@ -184,7 +184,7 @@ img {
 .nav-link:hover {
   color: rgba(255, 255, 255, 0.8);
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .nav-link {
     font-size: 1.5rem;
     color: #ffffff !important;
@@ -205,7 +205,7 @@ img {
 .mobile-toggle .icon-close {
   display: none;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .mobile-toggle {
     display: block;
   }
@@ -304,6 +304,11 @@ img {
   letter-spacing: -2px;
   margin-bottom: 24px;
 }
+@media (min-width: 0) and (max-width: 1038px) {
+  .hero .hero-grid .hero-content .hero-title {
+    font-size: 3rem;
+  }
+}
 .hero .hero-grid .hero-content .hero-title-white {
   background: linear-gradient(to bottom right, #fff 40%, #94a3b8 100%);
   -webkit-background-clip: text;
@@ -321,6 +326,11 @@ img {
   max-width: 540px;
   line-height: 1.7;
 }
+@media (min-width: 0) and (max-width: 1038px) {
+  .hero .hero-grid .hero-content .hero-subtitle {
+    font-size: 1rem;
+  }
+}
 .hero .hero-grid .hero-content .hero-cta {
   display: flex;
   gap: 16px;
@@ -333,7 +343,7 @@ img {
   position: absolute;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
-  padding: 20px;
+  padding: 10px;
   border-radius: 16px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
   z-index: 3;
@@ -343,9 +353,20 @@ img {
   gap: 15px;
   animation: float 6s ease-in-out infinite;
 }
+@media (min-width: 1040px) {
+  .hero .hero-grid .hero-visual .floating-card {
+    font-size: 20px;
+  }
+}
 .hero .hero-grid .hero-visual .floating-card.card-compliance {
-  top: 15%;
+  top: -5%;
   left: -40px;
+}
+@media (min-width: 1040px) {
+  .hero .hero-grid .hero-visual .floating-card.card-compliance {
+    top: 15%;
+    left: -40px;
+  }
 }
 .hero .hero-grid .hero-visual .floating-card.card-revenue {
   bottom: 10%;
@@ -361,13 +382,23 @@ img {
   justify-content: center;
 }
 .hero .hero-grid .hero-visual .floating-card .card-text h5 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
 }
+@media (min-width: 1040px) {
+  .hero .hero-grid .hero-visual .floating-card .card-text h5 {
+    font-size: 1rem;
+  }
+}
 .hero .hero-grid .hero-visual .floating-card .card-text p {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: #64748b;
   margin: 0;
+}
+@media (min-width: 1040px) {
+  .hero .hero-grid .hero-visual .floating-card .card-text p {
+    font-size: 0.8rem;
+  }
 }
 .hero .hero-grid .hero-visual .main-image-wrapper {
   position: relative;

@@ -69,6 +69,11 @@
         gap: 60px;
         align-items: center;
 
+        // @include respond-to($break-md) {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+
         .hero-content {
             .hero-tag {
                 display: inline-flex;
@@ -92,6 +97,10 @@
                 letter-spacing: -2px;
                 margin-bottom: 24px;
 
+                @include respond-to-min-max(0, $break-lg - 1) {
+                    font-size: 3rem;
+                }
+
                 &-white {
                     background: linear-gradient(to bottom right, #fff 40%, #94a3b8 100%);
                     -webkit-background-clip: text;
@@ -110,6 +119,10 @@
                 margin-bottom: 40px;
                 max-width: 540px;
                 line-height: 1.7;
+
+                @include respond-to-min-max(0, $break-lg - 1) {
+                    font-size: 1rem;
+                }
             }
 
             .hero-cta {
@@ -126,7 +139,7 @@
                 position: absolute;
                 background: rgba(255, 255, 255, 0.85);
                 backdrop-filter: blur(12px);
-                padding: 20px;
+                padding: 10px;
                 border-radius: $radius-md;
                 box-shadow: $shadow-md;
                 z-index: 3;
@@ -136,9 +149,18 @@
                 gap: 15px;
                 animation: float 6s ease-in-out infinite;
 
+                @include respond-to($break-lg) {
+                    font-size: 20px;
+                }
+
                 &.card-compliance {
-                    top: 15%;
+                    top: -5%;
                     left: -40px;
+
+                    @include respond-to($break-lg) {
+                        top: 15%;
+                        left: -40px;
+                    }
                 }
 
                 &.card-revenue {
@@ -158,13 +180,21 @@
 
                 .card-text {
                     h5 {
-                        font-size: 1rem;
+                        font-size: 0.8rem;
                         font-weight: 700;
+
+                        @include respond-to($break-lg) {
+                            font-size: 1rem;
+                        }
                     }
                     p {
-                        font-size: 0.8rem;
+                        font-size: 0.6rem;
                         color: $slate-text;
                         margin: 0;
+
+                        @include respond-to($break-lg) {
+                            font-size: 0.8rem;
+                        }
                     }
                 }
             }

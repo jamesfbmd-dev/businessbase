@@ -24,8 +24,14 @@
 }
 
 // Breakpoints mixins for ranges
+// @mixin respond-to($breakpoint) {
+//   @media (max-width: ($breakpoint - 1px)) {
+//     @content;
+//   }
+// }
+
 @mixin respond-to($breakpoint) {
-  @media (max-width: ($breakpoint - 1px)) {
+  @media (min-width: ($breakpoint)) {
     @content;
   }
 }
