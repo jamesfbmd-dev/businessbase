@@ -804,8 +804,7 @@ span.sub-heading {
 }
 #testimonials .testimonials-slider .slider-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 15px;
   background-color: transparent;
   border: 1px solid #64748b;
   color: #ffffff;
@@ -823,10 +822,10 @@ span.sub-heading {
   border-color: #BD061A;
 }
 #testimonials .testimonials-slider .slider-arrow.prev {
-  left: 20px;
+  left: 0;
 }
 #testimonials .testimonials-slider .slider-arrow.next {
-  right: 20px;
+  right: 0;
 }
 #testimonials .testimonials-slider .slider-dots {
   text-align: center;
