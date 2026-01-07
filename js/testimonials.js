@@ -50,5 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
         resetTimer();
     });
 
+    // Read More functionality
+    const readMoreLinks = document.querySelectorAll('.read-more-link');
+    readMoreLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const testimonialText = e.target.previousElementSibling;
+            testimonialText.classList.toggle('expanded');
+            if (testimonialText.classList.contains('expanded')) {
+                e.target.textContent = 'Read Less';
+            } else {
+                e.target.textContent = 'Read More';
+            }
+        });
+    });
+
     startSlider();
 });
