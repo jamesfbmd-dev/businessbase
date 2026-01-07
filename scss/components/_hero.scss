@@ -206,6 +206,10 @@
                 box-shadow: $shadow-lg;
                 z-index: 2;
 
+                @include respond-to-min-max(0, $break-lg - 1) {
+                    max-width: 80vw;
+                }
+
                 .hero-image {
                     width: 100%;
                     height: auto;

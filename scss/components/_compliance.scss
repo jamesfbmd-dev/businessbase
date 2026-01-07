@@ -18,6 +18,7 @@
                 border-radius: $radius-md;
                 box-shadow: $shadow-sm;
                 margin-top: 24px;
+                // max-width: 400px;
 
                 .feature-icon { color: $brand-red; flex-shrink: 0; }
                 .feature-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
