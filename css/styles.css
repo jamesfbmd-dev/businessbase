@@ -154,7 +154,7 @@ img {
   align-items: center;
   gap: 40px;
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .nav-links {
     display: none;
     position: fixed;
@@ -184,7 +184,7 @@ img {
 .nav-link:hover {
   color: rgba(255, 255, 255, 0.8);
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .nav-link {
     font-size: 1.5rem;
     color: #ffffff !important;
@@ -205,7 +205,7 @@ img {
 .mobile-toggle .icon-close {
   display: none;
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .mobile-toggle {
     display: block;
   }
