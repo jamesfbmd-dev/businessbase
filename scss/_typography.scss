@@ -1,10 +1,23 @@
-// p {
-//     font-size: 1.6rem;
-// }
+h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
 
-// @mixin body-copy {
-//     p {
-//         font-size: 1.6rem;
-//         color: $navy-deep;
-//     }
-// }
+h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+span.sub-heading {
+    color: #BD061A;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}

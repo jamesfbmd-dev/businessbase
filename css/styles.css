@@ -62,6 +62,30 @@ img {
   font-weight: 800;
 }
 
+h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+span.sub-heading {
+  color: #BD061A;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -745,6 +769,146 @@ img {
     flex-direction: column;
   }
 }
+#testimonials {
+  background-color: #020617;
+  color: #ffffff;
+  padding: 50px 0;
+}
+#testimonials .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#testimonials .testimonials-wrapper {
+  display: flex;
+}
+#testimonials .testimonials-wrapper .slider-arrow {
+  background-color: transparent;
+  border: 1px solid #64748b;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#testimonials .testimonials-wrapper .slider-arrow:hover {
+  background-color: #BD061A;
+  border-color: #BD061A;
+}
+#testimonials .testimonials-wrapper .slider-arrow.prev {
+  left: 20px;
+}
+#testimonials .testimonials-wrapper .slider-arrow.next {
+  right: 20px;
+}
+#testimonials .testimonials-wrapper .testimonials-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 1.25rem;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .testimonial-slide {
+  display: none;
+  text-align: center;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .testimonial-slide.active {
+  display: block;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .testimonial-slide .testimonial-text {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .testimonial-slide .testimonial-author .author-name {
+  font-weight: 600;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .testimonial-slide .testimonial-author .author-title {
+  color: #64748b;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .testimonial-slide .read-more-btn {
+  margin: 5px 0 30px 0;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: #BD061A;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .slider-dots {
+  text-align: center;
+  margin-top: 40px;
+}
+#testimonials .testimonials-wrapper .testimonials-slider .slider-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #64748b;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#testimonials .testimonials-wrapper .testimonials-slider .slider-dots .dot.active {
+  background-color: #ffffff;
+}
+#testimonials #testimonialModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+}
+#testimonials #testimonialModal.is-open {
+  display: block;
+}
+#testimonials #testimonialModal .modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+#testimonials #testimonialModal .modal-content {
+  position: relative;
+  max-width: 640px;
+  margin: 10vh auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  z-index: 1;
+}
+#testimonials #testimonialModal .modal-content .modal-text {
+  margin-top: 1rem;
+  color: #020617;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+#testimonials #testimonialModal .modal-content .modal-author {
+  margin-top: 1.5rem;
+  color: #020617;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+#testimonials #testimonialModal .modal-content .modal-author .modal-author-name {
+  font-weight: 600;
+}
+#testimonials #testimonialModal .modal-content .modal-author .modal-author-title {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+#testimonials #testimonialModal .modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 #why-us .section-header {
   text-align: center;
   max-width: 700px;
