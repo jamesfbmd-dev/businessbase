@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startSlider() {
-        interval = setInterval(nextSlide, 5000);
+        // interval = setInterval(nextSlide, 5000);
+        interval = setInterval(nextSlide, 500000000);
     }
 
     function resetTimer() {
