@@ -1,32 +1,54 @@
 #why-us {
     @include section-styles(center);
+    background-color: $white;
 
     .reasons-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
+        gap: 48px;
 
         .reason-card {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            align-items: flex-start;
+            text-align: left;
+            padding: 32px;
+            background: $bg-light;
+            border-radius: $radius-lg;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: $transition;
+
+            &:hover {
+                background: $white;
+                border-color: $brand-red;
+                box-shadow: $shadow-md;
+            }
 
             .reason-icon-wrapper {
-                margin: 0 auto 24px;
-                width: 70px;
-                height: 70px;
+                margin: 0 0 24px;
+                width: 56px;
+                height: 56px;
                 background: $white;
-                border-radius: 20px;
+                border-radius: $radius-md;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: $shadow-md;
+                box-shadow: $shadow-sm;
                 color: $brand-red;
+                border: 1px solid rgba(0,0,0,0.05);
             }
 
-            .reason-title { font-weight: 800; font-size: 1.2rem; margin-bottom: 12px; }
-            .reason-text { font-size: 0.95rem; color: $slate-text; }
+            .reason-title {
+                font-weight: 700;
+                font-size: 1.15rem;
+                margin-bottom: 12px;
+                color: $navy-dark;
+            }
+            .reason-text {
+                font-size: 0.95rem;
+                color: $slate-text;
+                line-height: 1.6;
+            }
         }
     }
 }

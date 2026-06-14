@@ -7,58 +7,19 @@
     overflow: hidden;
     background: $navy-deep;
 
-    &:hover .hero-image {
-        transform: scale(1);
-    }
-
-    .blob {
+    &::before {
+        content: '';
         position: absolute;
-        width: 900px;
-        height: 900px;
-        filter: blur(150px);
-        opacity: 0.25; /* slightly softer */
-        border-radius: 50%;
-        animation: move 30s infinite alternate ease-in-out;
-        // animation: pulse 3s infinite ease-in-out;
-
-        &-1 {
-            background: radial-gradient(circle, #6B5B95 0%, transparent 70%);
-            top: -10%;
-            left: -15%;
-            animation-duration: 28s;
-        }
-
-        &-2 {
-            background: radial-gradient(circle, #feb236 0%, transparent 70%);
-            bottom: -10%;
-            right: -15%;
-            animation-duration: 32s;
-            animation-delay: -6s;
-        }
-
-        &-3 {
-            background: radial-gradient(circle, #d64161 0%, transparent 70%);
-            top: 20%;
-            right: 10%;
-            animation-duration: 36s;
-            animation-delay: -3s;
-        }
-
-        &-4 {
-            background: radial-gradient(circle, #ff7b25 0%, transparent 70%);
-            bottom: 20%;
-            left: 10%;
-            animation-duration: 34s;
-            animation-delay: -8s;
-        }
-
-        &-5 {
-            background: radial-gradient(circle, #92a8d1 0%, transparent 70%);
-            top: 45%;
-            left: 35%;
-            animation-duration: 40s;
-            animation-delay: -12s;
-        }
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+            linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)),
+            url('https://images.unsplash.com/photo-1454165833767-0274b24f21f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15;
     }
 
     .hero-grid {
@@ -71,7 +32,8 @@
 
         @include respond-to($break-md) {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
         }
 
         .hero-content {
@@ -79,45 +41,51 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 8px;
-                background: rgba(189, 6, 26, 0.08);
+                background: rgba(189, 6, 26, 0.1);
+                border: 1px solid rgba(189, 6, 26, 0.2);
                 color: $brand-red;
-                padding: 8px 16px;
-                border-radius: $radius-full;
-                font-size: 0.85rem;
+                padding: 6px 16px;
+                border-radius: $radius-sm;
+                font-size: 0.75rem;
                 font-weight: 700;
                 text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-bottom: 24px;
+                letter-spacing: 1.5px;
+                margin-bottom: 32px;
             }
 
             .hero-title {
-                font-size: 4.5rem;
+                font-size: 3.75rem;
                 font-weight: 800;
                 line-height: 1.1;
-                letter-spacing: -2px;
+                letter-spacing: -0.02em;
                 margin-bottom: 24px;
+                color: $white;
 
                 @include respond-to-min-max(0, $break-lg - 1) {
-                    font-size: 3rem;
+                    font-size: 2.75rem;
                 }
 
                 &-white {
-                    background: linear-gradient(to bottom right, #fff 40%, #94a3b8 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    // background: linear-gradient(to bottom right, #fff 40%, #94a3b8 100%);
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                    color: $white;
                 }
 
                 &-red {
-                    background: linear-gradient(to right, $brand-red, $brand-light);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    // background: linear-gradient(to right, $brand-red, $brand-light);
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                    color: $brand-red;
+                    display: block;
+                    margin-top: 8px;
                 }
             }
             .hero-subtitle {
-                font-size: 1.25rem;
-                color: $slate-text;
-                margin-bottom: 40px;
-                max-width: 540px;
+                font-size: 1.125rem;
+                color: #94a3b8;
+                margin-bottom: 48px;
+                max-width: 500px;
                 line-height: 1.7;
 
                 @include respond-to-min-max(0, $break-lg - 1) {
@@ -127,171 +95,86 @@
 
             .hero-cta {
                 display: flex;
-                gap: 16px;
+                gap: 20px;
                 flex-wrap: wrap;
 
                 .btn {
-                    font-size: 0.8rem;
-                    padding: 0.5rem 1.2rem;
-
-                    @include respond-to($break-lg) {
-                        font-size: 1rem;
-                        padding: 1rem 2rem;
-                    }
+                    padding: 16px 32px;
                 }
             }
         }
 
         .hero-visual {
-            display: none;
             position: relative;
-
-            @include respond-to($break-md) {
-                display: inline-block;
-            }
+            width: 100%;
 
             .floating-card {
                 position: absolute;
-                background: rgba(255, 255, 255, 0.85);
-                backdrop-filter: blur(12px);
-                padding: 10px;
+                background: $white;
+                padding: 16px 24px;
                 border-radius: $radius-md;
-                box-shadow: $shadow-md;
+                box-shadow: $shadow-lg;
                 z-index: 3;
-                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-left: 4px solid $brand-red;
                 display: flex;
                 align-items: center;
-                gap: 15px;
-                animation: float 6s ease-in-out infinite;
-
-                @include respond-to($break-lg) {
-                    font-size: 20px;
-                }
+                gap: 16px;
+                animation: none; // Remove floating animation
 
                 &.card-compliance {
-                    top: -5%;
-                    left: -40px;
-
-                    @include respond-to($break-lg) {
-                        top: 15%;
-                        left: -40px;
-                    }
+                    top: -20px;
+                    left: -20px;
                 }
 
                 &.card-revenue {
-                    bottom: 10%;
+                    bottom: -20px;
                     right: -20px;
-                    animation-delay: 1s;
+                    border-left-color: #22c55e;
                 }
 
                 .card-icon {
-                    width: 48px;
-                    height: 48px;
+                    width: 40px;
+                    height: 40px;
                     border-radius: $radius-sm;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    font-size: 1.25rem;
                 }
 
                 .card-text {
                     h5 {
-                        font-size: 0.8rem;
+                        font-size: 0.9rem;
                         font-weight: 700;
-
-                        @include respond-to($break-lg) {
-                            font-size: 1rem;
-                        }
+                        color: $navy-dark;
+                        margin: 0;
                     }
                     p {
-                        font-size: 0.6rem;
+                        font-size: 0.75rem;
                         color: $slate-text;
                         margin: 0;
-
-                        @include respond-to($break-lg) {
-                            font-size: 0.8rem;
-                        }
                     }
                 }
             }
 
             .main-image-wrapper {
                 position: relative;
-                border-radius: $radius-lg;
+                border-radius: $radius-md;
                 overflow: hidden;
-                box-shadow: $shadow-lg;
+                box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.4);
                 z-index: 2;
-
-                @include respond-to-min-max(0, $break-lg - 1) {
-                    max-width: 80vw;
-                }
+                border: 1px solid rgba(255, 255, 255, 0.1);
 
                 .hero-image {
                     width: 100%;
                     height: auto;
-                    transform: scale(1.05);
-                    transition: transform 10s ease-out;
+                    filter: grayscale(0.2) contrast(1.1);
+                    transition: transform 0.5s ease;
                 }
             }
         }
     }
 }
 
-@keyframes move {
-    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-    25% { transform: translate(10%, 15%) scale(1.05) rotate(4deg); }
-    50% { transform: translate(-15%, 10%) scale(0.95) rotate(-3deg); }
-    75% { transform: translate(12%, -12%) scale(1.02) rotate(2deg); }
-    100% { transform: translate(0, 0) scale(1) rotate(0deg); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
 .icon-red { background: rgba(189, 6, 26, 0.1); color: $brand-red; }
 .icon-green { background: rgba(34, 197, 94, 0.1); color: #16a34a; }
-
-// @media (max-width: 1100px) {
-//     .hero-grid {
-//         grid-template-columns: 1fr;
-//         text-align: center;
-//     }
-//     .hero-title {
-//         font-size: 3.5rem;
-//     }
-//     .hero-content {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//     }
-//     .hero-cta {
-//         justify-content: center;
-//     }
-//     .hero-visual {
-//         max-width: 600px;
-//         margin: 40px auto 0;
-//     }
-// }
-
-// @media (max-width: 768px) {
-//     .hero-title {
-//         font-size: 2.75rem;
-//         letter-spacing: -1px;
-//     }
-//     .floating-card {
-//         padding: 12px;
-//     }
-//     .card-compliance {
-//         left: 0;
-//     }
-//     .card-revenue {
-//         right: 0;
-//     }
-// }

@@ -1,26 +1,7 @@
 #services {
     @include section-styles;
-    // .section-header {
-    //     text-align: center;
-    //     max-width: 700px;
-    //     margin: 0 auto 80px;
+    background-color: $bg-light;
 
-    //     .sub-heading {
-    //         color: $brand-red;
-    //         font-weight: 700;
-    //         text-transform: uppercase;
-    //         font-size: 0.875rem;
-    //         letter-spacing: 2px;
-    //         margin-bottom: 12px;
-    //         display: block;
-    //     }
-    //     .main-heading {
-    //         font-size: 3rem;
-    //         margin-bottom: 20px;
-    //         letter-spacing: -1px;
-    //         font-weight: 800;
-    //     }
-    // }
     .services-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -28,43 +9,46 @@
 
         .service-card {
             background: $white;
-            padding: 48px;
+            padding: 40px;
             border-radius: $radius-lg;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.08);
             transition: $transition;
             display: flex;
             flex-direction: column;
             position: relative;
+            box-shadow: $shadow-sm;
 
             &:hover {
-                transform: translateY(-10px);
+                transform: translateY(-4px);
                 box-shadow: $shadow-lg;
-                border-color: rgba(189, 6, 26, 0.1);
+                border-color: $brand-red;
             }
 
             .service-icon {
-                width: 64px;
-                height: 64px;
+                width: 56px;
+                height: 56px;
                 background: $bg-light;
                 border-radius: $radius-md;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-bottom: 32px;
-                color: $navy-dark;
+                margin-bottom: 28px;
+                color: $brand-red;
+                border: 1px solid rgba(0,0,0,0.05);
             }
 
             .service-title {
-                font-size: 1.5rem;
-                font-weight: 800;
-                margin-bottom: 20px;
-                letter-spacing: -0.5px;
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 16px;
+                color: $navy-dark;
             }
 
             .service-description {
                 font-size: 0.95rem;
                 color: $slate-text;
-                margin-bottom: 24px;
+                margin-bottom: 28px;
+                line-height: 1.6;
             }
 
             .service-list {
@@ -75,51 +59,33 @@
                     display: flex;
                     align-items: center;
                     gap: 12px;
-                    margin-bottom: 14px;
+                    margin-bottom: 12px;
                     color: $slate-text;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                 }
 
                 .check-icon {
-                    color: #22c55e;
-                    width: 18px;
-                    height: 18px;
+                    color: $brand-red;
+                    width: 16px;
+                    height: 16px;
                     flex-shrink: 0;
                 }
             }
 
             &.featured {
-                transform: scale(1.05);
-                z-index: 10;
-                border: 1px solid rgba(189, 6, 26, 0.15);
-                box-shadow: $shadow-lg;
+                transform: none; // Remove scale
+                border-top: 4px solid $brand-red;
+                box-shadow: $shadow-md;
 
                 &:hover {
-                    transform: scale(1.05) translateY(-10px);
+                    transform: translateY(-4px);
                 }
 
                 .service-icon {
                     background: $brand-red;
                     color: $white;
-                    box-shadow: $shadow-brand;
-                }
-
-                .check-icon {
-                    color: $brand-red;
                 }
             }
         }
-    }
-}
-
-@media (max-width: 768px) {
-    .service-card.featured {
-        transform: none;
-        &:hover {
-            transform: translateY(-10px);
-        }
-    }
-    .main-heading {
-        font-size: 2.25rem;
     }
 }
