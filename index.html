@@ -13,26 +13,8 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
-<!--     <style>
-        /* The Container Div */
-        #globe-container {
-            width: 600px;
-            height: 400px;
-            /*background-color: #000;*/
-            position: relative;
-            overflow: hidden;
-            min-width: 200px;
-            min-height: 200px;
-        }
-
-        canvas {
-            display: block;
-            outline: none;
-        }
-    </style> -->
 </head>
 <body>
 
@@ -61,17 +43,7 @@
     <!-- Modern Hero Section -->
     <section class="hero">
 
-        <div class="gradient-bg">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-            <div class="blob blob-3"></div>
-            <div class="blob blob-4"></div>
-            <div class="blob blob-5"></div>
-            <div class="blob blob-6"></div>
-        </div>
-
         <div class="container hero-grid">
-            <!-- <div id="globe-container"></div> -->
 
             <div class="hero-content">
                 <div class="hero-tag">
@@ -486,46 +458,8 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
-
-        const hero = document.querySelector('.hero-visual');
-        const maxTilt = 10; // maximum degrees of rotation
-        const ease = 0.05;  // smaller = heavier, slower easing
-
-        // Track target mouse position normalized to -1 → 1
-        let target = { x: 0, y: 0 };
-        let current = { x: 0, y: 0 };
-
-        window.addEventListener('mousemove', (e) => {
-          target.x = (e.clientX / window.innerWidth - 0.5) * 2; // -1 left, 1 right
-          target.y = (e.clientY / window.innerHeight - 0.5) * 2; // -1 top, 1 bottom
-        });
-
-        function animate() {
-          // Interpolate current position towards target
-          current.x += (target.x - current.x) * ease;
-          current.y += (target.y - current.y) * ease;
-
-          // Calculate rotations
-          const rotateY = current.x * maxTilt; // tilt left/right
-          const rotateX = -current.y * maxTilt; // tilt up/down
-
-          // Apply 3D transform
-          hero.style.transform = `
-            perspective(1000px)
-            rotateX(${rotateX}deg)
-            rotateY(${rotateY}deg)
-          `;
-
-          requestAnimationFrame(animate);
-        }
-
-        // Start animation loop
-        animate();
-
-
     </script>
     <script src="js/main.js"></script>
-    <script src="js/hero.js"></script>
     <script src="js/testimonials.js"></script>
 </body>
 </html>

@@ -2,45 +2,45 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 16px 32px;
-    border-radius: $radius-full;
-    font-weight: 600;
+    gap: 12px;
+    padding: 14px 28px;
+    border-radius: $radius-md;
+    font-weight: 700;
     cursor: pointer;
     transition: $transition;
-    border: none;
-    font-size: 1rem;
+    border: 1px solid transparent;
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
 
     &-primary {
         background-color: $brand-red;
         color: $white;
-        box-shadow: $shadow-brand;
+        border-color: $brand-red;
 
         &:hover {
             background-color: $brand-dark;
-            // transform: translateY(-3px);
-            // box-shadow: 0 15px 20px -5px rgba(189, 6, 26, 0.35);
+            border-color: $brand-dark;
         }
     }
 
     &-secondary {
-        background-color: $bg-light;
-        color: $navy-dark;
-        backdrop-filter: blur(8px);
+        background-color: transparent;
+        color: $white;
+        border-color: rgba(255, 255, 255, 0.3);
 
         &:hover {
-            // background-color: $white;
-            // transform: translateY(-2px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: $white;
         }
     }
 
     &-nav {
-        padding: 10px 24px;
-        font-size: 0.9rem;
+        padding: 8px 20px;
+        font-size: 0.85rem;
     }
 
     &-full {
         width: 100%;
-        border-radius: $radius-sm;
+        border-radius: $radius-md;
     }
 }
