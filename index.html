@@ -16,23 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
-<!--     <style>
-        /* The Container Div */
-        #globe-container {
-            width: 600px;
-            height: 400px;
-            /*background-color: #000;*/
-            position: relative;
-            overflow: hidden;
-            min-width: 200px;
-            min-height: 200px;
-        }
-
-        canvas {
-            display: block;
-            outline: none;
-        }
-    </style> -->
 </head>
 <body>
 
@@ -71,7 +54,6 @@
         </div>
 
         <div class="container hero-grid">
-            <!-- <div id="globe-container"></div> -->
 
             <div class="hero-content">
                 <div class="hero-tag">
@@ -97,83 +79,74 @@
             </div>
 
             <div class="hero-visual">
-                <div class="floating-card card-compliance">
-                    <div class="card-icon icon-red"><i data-lucide="heart-handshake"></i></div>
-                    <div class="card-text">
-                        <h5>Local Experts</h5>
-                        <p>Payroll you can trust</p>
-                    </div>
-                </div>
-
-                <div class="main-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Financial Planning" class="hero-image">
-                </div>
-
-                <div class="floating-card card-revenue">
-                    <div class="card-icon icon-green"><i data-lucide="shield-check"></i></div>
-                    <div class="card-text">
-                        <h5>100% Compliant</h5>
-                        <p>xyz Accredited</p>
-                    </div>
-                </div>
+                <!-- PLACEHOLDER -->
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section-padding">
+    <section id="why-us" class="section-padding">
         <div class="container">
-            <div class="section-header">
-                <span class="sub-heading">Specialist Expertise</span>
-                <h2 class="main-heading">Payroll You Can Trust,<br>Bookkeeping that just works.</h2>
-                <p>From local trades to regional distributors, we provide the infrastructure your business needs to scale without the administrative headache.</p>
+            <div class="top-section">
+                <div class="section-header">
+                    <span class="sub-heading">Support for <br>your small business</span>
+                    <h2 class="main-heading">Payroll You Can Trust,<br>Bookkeeping that just works.</h2>
+                    <p>From local trades to regional distributors, we provide the infrastructure your business needs to scale without the administrative headache.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="card">
+                        <div class="feature-icon"><i data-lucide="calendar" size="28"></i></div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Impedit odit ullam aperiam ab aliquam debitis atque eaque, tenetur veritatis quia molestias quo quidem veniam ex numquam, magni quis repellendus cumque!</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="feature-icon"><i data-lucide="calendar" size="28"></i></div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Impedit odit ullam aperiam ab aliquam debitis atque eaque, tenetur veritatis quia molestias quo quidem veniam ex numquam, magni quis repellendus cumque!</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="feature-icon"><i data-lucide="calendar" size="28"></i></div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Impedit odit ullam aperiam ab aliquam debitis atque eaque, tenetur veritatis quia molestias quo quidem veniam ex numquam, magni quis repellendus cumque!</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="feature-icon"><i data-lucide="calendar" size="28"></i></div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Impedit odit ullam aperiam ab aliquam debitis atque eaque, tenetur veritatis quia molestias quo quidem veniam ex numquam, magni quis repellendus cumque!</p>
+                    </div>
+                </div>
             </div>
+            <div class="bottom-section">
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <div class="feature-icon"><i data-lucide="check" size="28"></i></div>
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
 
-            <div class="services-grid">
-                <!-- General Bookkeeping -->
-                <div class="service-card">
-                    <div class="service-icon"><i data-lucide="file-spreadsheet"></i></div>
-                    <h3 class="service-title">Bookkeeping</h3>
-                    <p class="service-description">Keep your records pristine and your cashflow predictable with our daily management services.</p>
-                    <ul class="service-list">
-                        <li><i data-lucide="check" class="check-icon"></i> End-to-end GST Returns</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Bank Reconciliation</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Cashflow Forecasting</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Monthly Reporting</li>
-                    </ul>
-                </div>
+                    <div class="trust-item">
+                        <div class="feature-icon"><i data-lucide="check" size="28"></i></div>
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
 
-                <!-- Payroll (Featured Card) -->
-                <div class="service-card featured">
-                    <div class="service-icon"><i data-lucide="users-2"></i></div>
-                    <h3 class="service-title">Payroll Management</h3>
-                    <p class="service-description">The gold standard for NZ payroll. We ensure your team is paid right, every single time, without the legal risk.</p>
-                    <ul class="service-list">
-                        <li><i data-lucide="check" class="check-icon"></i> Holidays Act Audits</li>
-                        <li><i data-lucide="check" class="check-icon"></i> PAYE & IRD Management</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Leave Liability Tracking</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Automated Pay Slips</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary btn-full">Get a Payroll Quote</a>
-                </div>
+                    <div class="trust-item">
+                        <div class="feature-icon"><i data-lucide="check" size="28"></i></div>
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
 
-                <!-- Software Setup -->
-                <div class="service-card">
-                    <div class="service-icon"><i data-lucide="zap"></i></div>
-                    <h3 class="service-title">Digital Systems</h3>
-                    <p class="service-description">Modernize your tech stack. We implement the best-in-class tools for your specific industry.</p>
-                    <ul class="service-list">
-                        <li><i data-lucide="check" class="check-icon"></i> Xero & MYOB Setup</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Workflow Automation</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Inventory Integration</li>
-                        <li><i data-lucide="check" class="check-icon"></i> Staff Training Sessions</li>
-                    </ul>
+                    <div class="trust-item">
+                        <div class="feature-icon"><i data-lucide="check" size="28"></i></div>
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Trusted By -->
+    <!-- Trusted By -->
     <section class="trusted-by" id="trusted-by">
         <div class="container">
             <div class="trusted-label">Empowering Industry Leaders Across Marlborough</div>
@@ -187,55 +160,58 @@
         </div>
     </section>
 
-    <!-- Compliance Detail Section -->
-    <section id="compliance" class="section-padding compliance-section">
-        <div class="container compliance-container">
-            <div class="section-header compliance-content">
-                <span class="sub-heading">Regulatory Confidence</span>
-                <h2 class="main-heading">Bulletproof Payroll</h2>
-                <p>Compliance isn't just about avoiding fines, it's about building trust with your employees. We specialize in the nuances of New Zealand's Holidays Act, ensuring calculations like 'Average Weekly Earnings' are always&nbsp;precise.</p>
-
-                <div class="compliance-feature">
-                    <div class="feature-icon"><i data-lucide="check-check" size="28"></i></div>
-                    <div>
-                        <h5 class="feature-title">Certified</h5>
-                        <p class="feature-text">NZPPA Accredited Member. Meeting recognised payroll standards for accuracy, compliance, and&nbsp;consistency.</p>
-                    </div>
-                </div>
-
-                <div class="compliance-feature">
-                    <div class="feature-icon"><i data-lucide="check-circle-2" size="28"></i></div>
-                    <div>
-                        <h5 class="feature-title">Holidays Act Experts</h5>
-                        <p class="feature-text">We mitigate the risk of back-pay issues by auditing leave entitlements continuously and&nbsp;proactively.</p>
-                    </div>
-                </div>
-
-                <div class="compliance-feature">
-                    <div class="feature-icon"><i data-lucide="calendar" size="28"></i></div>
-                    <div>
-                        <h5 class="feature-title">On-Time, Every Time</h5>
-                        <p class="feature-text">Automated filings mean you never have to worry about IRD penalties or late returns ever&nbsp;again.</p>
-                    </div>
-                </div>
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading">Comprehensive Services</span>
+                <h2 class="main-heading">What we can do</h2>
+                <!-- <p>From local trades to regional distributors, we provide the infrastructure your business needs to scale without the administrative headache.</p> -->
             </div>
-
-            <div class="compliance-visual">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Compliance Review" class="visual-img">
-                <div class="stat-badge">
-                    <div class="badge-circle">
-                        <i data-lucide="shield" size="24"></i>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="check-check" size="28"></i>
                     </div>
-                    <div>
-                        <div class="badge-title">Certified</div>
-                        <div class="badge-subtitle">NZPPA Accredited Member</div>
+                    <div class="content">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Amet, debitis possimus eveniet nemo vitae corporis, facere, corrupti, facilis adipisci itaque fugit expedita ullam. Alias quod quae quos quisquam repellendus, numquam!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="check-check" size="28"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Amet, debitis possimus eveniet nemo vitae corporis, facere, corrupti, facilis adipisci itaque fugit expedita ullam. Alias quod quae quos quisquam repellendus, numquam!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="check-check" size="28"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Amet, debitis possimus eveniet nemo vitae corporis, facere, corrupti, facilis adipisci itaque fugit expedita ullam. Alias quod quae quos quisquam repellendus, numquam!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i data-lucide="check-check" size="28"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Amet, debitis possimus eveniet nemo vitae corporis, facere, corrupti, facilis adipisci itaque fugit expedita ullam. Alias quod quae quos quisquam repellendus, numquam!</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+        <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials-section">
         <div class="container">
             <div class="section-header">
@@ -245,36 +221,6 @@
                 <div class="arrow-wrapper left">
                     <button class="slider-arrow prev"><i data-lucide="chevron-left"></i></button>
                 </div>
-
-                <!-- <div class="testimonials-slider">
-                    <div class="testimonial-slide active">
-                        <p class="testimonial-text">"We LOVE the product. I love the new games and new modes that come out. There's a cool variety of games and having multiple levels make it fun."</p>
-                        <div class="testimonial-author">
-                            <p class="author-name">Dustin Pelletier</p>
-                            <p class="author-title">Franchise Owner Big Air Trampoline Park Spartanburg</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="testimonial-text">"BusinessBase has been a game-changer for our business. Their payroll services are seamless and their bookkeeping support is second to none."</p>
-                        <div class="testimonial-author">
-                            <p class="author-name">Jane Doe</p>
-                            <p class="author-title">CEO, Example Corp</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="testimonial-text">"The team at BusinessBase is always responsive and helpful. They've taken the stress out of managing our finances."</p>
-                        <div class="testimonial-author">
-                            <p class="author-name">John Smith</p>
-                            <p class="author-title">Owner, Small Business</p>
-                        </div>
-                    </div>
-
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div> -->
 
                 <div class="testimonials-slider">
                   <div class="testimonial-slide active">
@@ -360,41 +306,90 @@
         </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="why-us" class="section-padding">
+    <div id="faq" class="section-padding">
         <div class="container">
+
             <div class="section-header">
-                <span class="sub-heading">The BusinessBase Advantage</span>
-                <h2 class="main-heading">Your local finance department</h2>
+                <!-- <span class="sub-heading">Frequently Asked Questions</span> -->
+                <h2 class="main-heading">Frequently asked questions</h2>
             </div>
 
-            <div class="reasons-grid">
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i data-lucide="navigation"></i>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Do I need to use Xero?</h4>
+                        <span class="faq-icon">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            We work with Xero and other accounting platforms. We can
+                            help determine the best solution for your business.
+                        </p>
                     </div>
-                    <h4 class="reason-title">Marlborough Born</h4>
-                    <p class="reason-text">We don't live in a call center. We're right here in Blenheim, ready to meet in person and walk through your books.</p>
                 </div>
 
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i data-lucide="medal"></i>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Can you take over from my current bookkeeper?</h4>
+                        <span class="faq-icon">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes. We can manage the transition process and ensure your
+                            records remain accurate and up to date.
+                        </p>
                     </div>
-                    <h4 class="reason-title">Xero Gold Partners</h4>
-                    <p class="reason-text">We utilize the highest level of cloud technology to keep your data secure, accessible, and ready for tax time.</p>
                 </div>
 
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i data-lucide="sparkles"></i>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Do you handle payroll compliance?</h4>
+                        <span class="faq-icon">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            We assist with payroll processing, compliance requirements,
+                            employee records, leave tracking and reporting.
+                        </p>
                     </div>
-                    <h4 class="reason-title">Proactive Insight</h4>
-                    <p class="reason-text">We don't just "do the books." We find efficiencies and cost-saving measures that save your business real money.</p>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>How often will we communicate?</h4>
+                        <span class="faq-icon">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Communication frequency depends on your needs, but we're
+                            always available when you need support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>How much do your services cost?</h4>
+                        <span class="faq-icon">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Pricing depends on the size and complexity of your business.
+                            Contact us for a tailored quote.
+                        </p>
+                    </div>
+                </div>
+
             </div>
+
         </div>
-    </section>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">

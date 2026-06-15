@@ -1,0 +1,43 @@
+#faq {
+    @include section-styles(center);
+
+    .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+
+        .faq-item {
+            border-bottom: 1px solid $navy-deep;
+
+            .faq-question {
+                width: 100%;
+                padding: 1.5rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: none;
+                border: none;
+                cursor: pointer;
+                text-align: left;
+
+                .faq-icon {
+                    flex-shrink: 0;
+                }
+            }
+
+            .faq-answer {
+                display: none;
+                padding-bottom: 1.5rem;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .faq-item.active {
+            .faq-answer {
+                display: block;
+            }
+        }
+    }
+}
